@@ -1,0 +1,63 @@
+/* Global styles */
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #6c757d;
+    --font-family: 'Montserrat', sans-serif;
+  }
+  
+  body {
+    font-family: var(--font-family);
+    background-color: #f7f7f7;
+    color: #333;
+  }
+  
+  a {
+    color: var(--primary-color);
+  }
+  
+  /* Error container */
+  .error-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background-image: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%), url("https://source.unsplash.com/random/1920x1080"); */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  /* Error heading */
+  .error-heading {
+    font-size: 15rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--primary-color);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin: 0;
+  }
+  
+  /* Error message */
+  .error-message {
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: #333;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
+    margin-top: 2rem;
+    text-align: center;
+  }
+  
+  
+  
+  button {
+    background-color: rgb(96, 121, 249);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  

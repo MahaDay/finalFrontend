@@ -1,0 +1,31 @@
+
+<button (click)="navigateToBackToList()"class= "btn btn-white float-end justify-content-start" >{{ 'BackToList' | translate }}</button>
+<h3 style="font-size: 200%; width: 150%; margin-top: 20px;">{{ 'Product details' | translate }}</h3>
+ <div>
+    <div>
+      <label><b>{{ 'Name: ' | translate }}</b></label>{{produit.nom}}
+      
+    </div>
+
+    <div>
+        <label><b>{{ 'Product Code: ' | translate }}</b></label>{{produit.code_produit}}
+        
+      </div>
+
+      <div>
+        <label><b>{{ 'Category: ' | translate }}</b></label>{{produit.categorie}}
+        
+      </div>
+
+      <div>
+        <label><b>{{ 'Price: ' | translate }}</b></label>{{produit.prix}}
+        
+      </div>
+
+      <div>
+        <label><b>{{ 'Description: ' | translate }}</b></label>{{produit.description}}
+        
+      </div>
+
+ </div> 
+

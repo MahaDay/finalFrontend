@@ -1,0 +1,75 @@
+
+<div class ="col-md-6 offset-md-3">
+  <h1 style="font-size: 200%; width: 150%; margin-top: 20px;">{{ 'Update Transaction' | translate }} </h1>
+<form (ngSubmit)="onSubmit()">
+
+  <label for="name">{{ 'Transaction type' | translate }}</label>
+
+  <div class="input-group">
+    <span class="input-group-text"><i class="bi bi-bookmarks-fill fs-4"></i></span>
+    <div class="flex-grow-1">
+        <select (change)="onChangeTransactionType($event)" class="form-select rounded-start-0" data-control="select2" data-placeholder="Select an option">
+          <option value="non_selectioner">{{ 'Unselected' | translate }}</option>
+          <option value="vente_integre">{{ 'Integrated sale' | translate }}</option>
+          <option value="services">{{ 'Services' | translate }}</option>
+          <option value="service_apre_vente">{{ 'After-sales service' | translate }}</option>
+        </select>
+    </div>
+</div>
+<br>
+  <br>
+
+  <div class="form-group">
+      <label for="name">{{ 'Product' | translate }}</label>
+      <input type="text" class="form-control" id="produit" required [(ngModel)]="transaction.produit" name="produit">
+    </div>
+    
+
+    <div class="form-group">
+      <label for="name">{{ 'Client' | translate }}</label>
+      <input type="text" class="form-control" id="client" required [(ngModel)]="transaction.client" name="Client">
+    </div>
+    <br>
+
+    
+      <label for="name">{{ 'Payment method' | translate }}</label>
+
+      <div class="input-group">
+        <span class="input-group-text"><i class="bi bi-bookmarks-fill fs-4"></i></span>
+        <div class="flex-grow-1">
+            <select (change)="onChangeMethodePaiement($event)" class="form-select rounded-start-0" data-control="select2" data-placeholder="Select an option">
+              <option value="CarteCredit">{{ 'Credit card' | translate }}</option>
+              <option value="PayPal">{{ 'PayPal' | translate }}</option>
+              <option value="Virement_bancaire">{{ 'Bank transfer' | translate }}</option>
+              <option value="Especes">{{ 'Cash' | translate }}</option>
+            </select>
+        </div>
+    </div>
+    
+
+    <div class="form-group">
+      <label for="name">{{ 'Amount' | translate }}</label>
+      <input type="text" class="form-control" id="montant" required [(ngModel)]="transaction.montant" name="montant">
+    </div>
+
+    
+      <label for="name">{{ 'Transaction status' | translate }} </label>
+
+      <div class="input-group">
+        <span class="input-group-text"><i class="bi bi-bookmarks-fill fs-4"></i></span>
+        <div class="flex-grow-1">
+            <select (change)="onChangeStatutTransaction($event)" class="form-select rounded-start-0" data-control="select2" data-placeholder="Select an option">
+              <option value="encours">{{ 'Current' | translate }}</option>
+              <option value="payee">{{ 'Paid' | translate }}</option>
+              <option value="annulee">{{ 'Canceled' | translate }}</option>
+              <option value="remboursee">{{ 'Refunded' | translate }}</option>
+            </select>
+        </div>
+    </div>
+    <br>
+
+  
+
+  <button type="submit" class="btn btn-success text-center">{{ 'Submit' | translate }}</button>
+</form>
+</div>

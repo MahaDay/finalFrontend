@@ -1,0 +1,172 @@
+.card-container {
+  max-width: 500px;
+margin: 0 auto;
+padding: 20px;
+border: 1px solid #ccc;
+border-radius: 10px;
+background: linear-gradient(to bottom right, #f2f2f2, #45248c20);
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+position: relative;
+opacity: 0.8;
+  
+
+
+}
+
+.label{
+  font-weight: bold;
+}
+.label1{
+  font-weight: bold;
+  top: -20px;
+
+}
+
+.h3{
+  margin-top: 2%;
+  margin-left: 22%;
+  font-weight: bold;
+  font-size: 2em;
+  font-family: "Lato", sans-serif;
+}
+
+.h1{
+  font-size: 1em;
+  margin-left: 19%;
+}
+
+
+
+.form-group input[name="username"] {
+  margin-top: 5px;
+}
+
+
+.profile-img-card {
+  width: 96px;
+  height: 96px; 
+  margin: 0 auto 10px;
+  display: block;
+ 
+  margin-top: 25px;
+  
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: linear-gradient(to right, #dee9ec, #772f6b);
+  width: 100%;
+  
+}
+
+.image_fond {
+  width: 100%;
+  margin-right: 5%;
+  margin-top: 5%;
+  position: fixed;
+  opacity: 0.6;
+}
+
+.all-card {
+  margin: 0 auto;
+  width: 40%;
+  margin-top:50px;
+}
+
+.input-group-prepend{
+  height: 33px;
+  margin-top: 5px;
+  line-height: 30px; 
+  margin-right: -1%;   
+}
+
+.input-group-prepend1{
+  height: 32px;
+  margin-right: -1.5%;
+  line-height: 30px;  
+  margin-top: -0.5px;
+  
+
+}
+
+
+.form-control {
+  padding-left: 40px;
+  border-radius: 5px;
+  border: none;
+  box-shadow: none;
+  background-color: #f5f5f5;
+}
+
+
+
+.form-control:focus {
+  border-color: #42a5f5;
+  box-shadow: none;
+}
+
+.form-control::-webkit-input-placeholder {
+  color: #999;
+}
+
+.form-control::-moz-placeholder {
+  color: #999;
+}
+
+.form-control:-ms-input-placeholder {
+  color: #999;
+}
+
+.form-control::-ms-input-placeholder {
+  color: #999;
+}
+
+.form-control::placeholder {
+  color: #999;
+}
+.inline-block {
+  display: inline-block;
+  margin-top: 4%;
+  /* padding-left: 40px; */
+}
+
+.form-control + .fa {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #999;
+}
+
+.form-control:focus + .fa {
+  color: #42a5f5;
+}
+
+.btn-primary {
+  background-color: #007bff;
+border-color: #007bff;
+background-image: linear-gradient(to right, #93d5e4, #ddb4d6, #cf7ed2);
+color: #fff;
+
+  
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: #0062cc;
+border-color: #005cbf;
+}
+
+.invalid-feedback {
+  display: block;
+  margin-top: 5px;
+  color: #f44336;
+}
+
+.col-md-12{
+  margin-top:2%;
+
+
+} 

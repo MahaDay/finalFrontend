@@ -1,0 +1,58 @@
+
+<div class ="col-md-6 offset-md-3">
+    <h1 style="font-size: 200%; width: 150%; margin-top: 20px;">{{ 'Create client' | translate }} </h1>
+  <form (ngSubmit)="onSubmit()">
+    <label for="name">{{ 'Salutation' | translate }}</label>
+    <br>
+
+    <div class="input-group">
+      <span class="input-group-text"><i class="bi bi-bookmarks-fill fs-4"></i></span>
+      <div class="flex-grow-1">
+          <select (change)="onChangeSalutationClient($event)" class="form-select rounded-start-0" data-control="select2" data-placeholder="Select a salutation">
+            <option value="Mr">{{ 'Mr' | translate }}</option>
+            <option value="Mme">{{ 'Mrs' | translate }}</option>
+            <option value="Mlle">{{ 'Miss' | translate }}</option>
+            <option value="Dr">{{ 'Dr' | translate }}</option>
+          </select>
+      </div>
+  </div> 
+  <br>
+
+    <div class="form-group">
+      <label for="name">{{ 'Name' | translate }}</label>
+      <input type="text" class="form-control" id="nom" required [(ngModel)]="client. nom" name="nom">
+    </div>
+
+    <div class="form-group">
+      <label for="name">{{ 'Date of birth' | translate }}</label>
+      <input type="text" class="form-control" id="date_naissance" required [(ngModel)]="client.date_naissance" name="date_naissance">
+    </div>
+
+    <div class="form-group">
+      <label for="name">{{ 'Telephone' | translate }}</label>
+      <input type="text" class="form-control" id="num_telephone " required [(ngModel)]="client.num_telephone " name="num_telephone ">
+    </div>
+
+    <div class="form-group">
+      <label for="name">{{ 'Email' | translate }}</label>
+      <input type="text" class="form-control" id="email" required [(ngModel)]="client.email" name="email">
+    </div>
+
+    <div class="form-group">
+        <label for="name">{{ 'Company' | translate }}</label>
+        <input type="text" class="form-control" id="entreprise" required [(ngModel)]="client.entreprise" name="entreprise">
+      </div>
+      
+
+      <div class="form-group">
+        <label for="name">{{ 'Commentary' | translate }}</label>
+        <input type="text" class="form-control" id="commentaire" required [(ngModel)]="client.commentaire" name="commentaire">
+      </div>
+
+      <button type="submit" class="btn btn-success text-center">{{ 'Submit' | translate }}</button>
+      <button (click)="navigateToBackToList()"class= "btn btn-white ml-5">{{ 'BackToList' | translate }}</button>
+  </form>
+</div>
+
+
+

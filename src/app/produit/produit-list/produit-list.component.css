@@ -1,0 +1,48 @@
+.delete-modal {
+    
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4);
+}
+
+.delete-modal-content {
+  background-color: white;
+  margin: 10% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 30%;
+  text-align: center;
+}
+
+
+
+
+.my-button {
+  background-color: #008CBA;
+  border: none;
+  color: white;
+  padding: 12px 24px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.delete-buttons button#delete-yes {
+  background-color: #f00;
+  margin-left: 20px;
+}
+
+.delete-buttons button#delete-no {
+  background-color: #ccc;
+  margin-left: 20px;
+}
+

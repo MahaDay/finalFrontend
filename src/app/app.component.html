@@ -1,0 +1,83 @@
+<html>
+  <body>
+    
+<div id="app" [dir]="getDirection()">
+  
+  <nav class="navbar navbar-expand navbar-dark bg-dark">
+
+    <a href="#" class="navbar-brand" >FRS</a>
+    <ul class="navbar-nav mr-auto" routerLinkActive="active" >
+      <li class="nav-item">
+        <a href="/home" class="nav-link" routerLink="home">{{ 'Home' | translate }} </a>
+      </li>
+      
+      <li class="nav-item">
+        <a class="nav-link"  *ngIf="isLoggedIn" routerLink="listClient">{{ 'Clients list' | translate }} </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" *ngIf="isLoggedIn" routerLink="listProduit">{{ 'Products list' | translate }} </a>
+      </li>
+     
+      <li class="nav-item">
+        <a class="nav-link"  *ngIf="isLoggedIn" routerLink="listTransaction">{{ 'Transactions list' | translate }} </a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link"  *ngIf="isLoggedIn" routerLink="Dashboard">{{'Dashboard'| translate}} </a>
+      </li>
+      
+      
+      <li class="nav-item" *ngIf="showAdminBoard">
+        <a href="/admin" class="nav-link" routerLink="admin">Admin Board</a>
+      </li>
+      <li class="nav-item" *ngIf="showModeratorBoard">
+        <a href="/mod" class="nav-link" routerLink="mod">Moderator Board</a>
+      </li>
+      <li class="nav-item">
+        <a href="/user" class="nav-link" *ngIf="isLoggedIn" routerLink="user">{{ 'User' | translate }}</a>
+      </li>
+    </ul>
+
+    <ul class="navbar-nav ml-auto" *ngIf="!isLoggedIn">
+      <li class="nav-item">
+        <a href="/register" class="nav-link" routerLink="register" >{{ 'Sign in' | translate }}</a>
+      </li>
+      <li class="nav-item">
+        <a href="/login" class="nav-link" routerLink="login">{{ 'Login' | translate }}</a>
+      </li>
+    </ul>
+
+    <ul class="navbar-nav ml-auto" *ngIf="isLoggedIn">
+      <li class="nav-item">
+        <a href="/profile" class="nav-link" routerLink="profile">{{ username }}</a>
+      </li>
+      <li class="nav-item">
+        <a href class="nav-link" (click)="logout()">{{ 'LogOut' | translate }}</a>
+      
+      </li>
+     
+    </ul>
+    <div class="btn-group btn-group-sm py-5">
+     
+      <button type="button" class="btn btn-sm btn-outline-secondary" (click)="changeLanguage('en-US')" [class.active]="!translateService.currentLang || translateService.currentLang === 'en-US'">Anglais</button>
+
+      <button type="button" class="btn btn-sm btn-outline-secondary" (click)="changeLanguage('fr-FR')" [class.active]="translateService.currentLang === 'fr-FR'">Français</button>
+
+      <button type="button" class="btn btn-sm btn-outline-secondary" (click)="changeLanguage('ar-AR')" [class.active]="translateService.currentLang === 'ar-AR'">عربي</button>
+
+    </div>
+  
+
+  </nav>
+
+  
+  
+
+
+  <div class="container">
+    <router-outlet></router-outlet>
+  </div>
+</div>
+
+</body>
+</html>

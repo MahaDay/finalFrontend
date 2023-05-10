@@ -1,0 +1,39 @@
+
+<button (click)="navigateToBackToList()"class= "btn btn-white float-end justify-content-start" >{{ 'BackToList' | translate }}</button>
+<h3 style="font-size: 200%; width: 150%; margin-top: 20px;">{{ 'Transaction details' | translate }}</h3>
+
+
+ <div>
+    <div>
+      <label><b>{{ 'Transaction type: ' | translate }} </b></label>{{transaction.typeTransaction}}
+      
+    </div>
+
+    <div>
+        <label><b>{{ 'Product: ' | translate }}</b></label>{{transaction.produit}}
+        
+      </div>
+
+      <div>
+        <label><b>{{ 'Client: ' | translate }}</b></label>{{transaction.client}}
+        
+      </div>
+
+      <div>
+        <label><b>{{ 'Payment method: ' | translate }}</b></label>{{transaction.methodePaiement}}
+        
+      </div>
+
+      <div>
+        <label><b>{{ 'Amount: ' | translate }}</b></label>{{transaction.montant}}
+        
+      </div>
+
+      <div>
+        <label><b>{{ 'Transaction status: ' | translate }} </b></label>{{transaction.statutTransaction}}
+        
+      </div>
+
+ </div> 
+
+

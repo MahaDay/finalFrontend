@@ -1,0 +1,39 @@
+<div class ="col-md-6 offset-md-3">
+  <br>
+  <h3>{{ 'Create product' | translate }}</h3>
+<form (ngSubmit)="onSubmit()">
+
+  <div class="form-group">
+    <label for="name">{{ 'Name' | translate }}</label>
+    <input type="text" class="form-control" id="nom" required [(ngModel)]="produit.nom" name="nom">
+  </div>
+
+  <div class="form-group">
+    <label for="name">{{ 'Product Code' | translate }} </label>
+    <input type="text" class="form-control" id="code_produit" required [(ngModel)]="produit.code_produit" name="code_produit">
+  </div>
+
+  <div class="form-group">
+      <label for="name">{{ 'Category' | translate }}</label>
+      <input type="text" class="form-control" id="categorie" required [(ngModel)]="produit.categorie" name="categorie">
+  </div>
+
+  <div class="form-group">
+    <label for="name">{{ 'Price' | translate }}</label>
+    <input type="text" class="form-control" id="prix" required [(ngModel)]="produit.prix" name="prix">
+  </div>
+
+  <div class="form-group">
+      <label for="name">{{ 'Description' | translate }}</label>
+      <input type="text" class="form-control" id="description" required [(ngModel)]="produit.description" name="description">
+  </div>
+
+    
+
+   
+
+  <button type="submit" class="btn btn-success text-center">{{ 'Submit' | translate }}</button>
+  <button (click)="navigateToBackToList()"class= "btn btn-white ml-5">{{ 'BackToList' | translate }}</button>
+  </form>
+</div>
+

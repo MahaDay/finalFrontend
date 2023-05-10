@@ -1,0 +1,26 @@
+/* Style for Client details header */
+h3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  /* Style for client details container */
+  div {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+  
+  /* Style for client detail label */
+  label {
+    font-weight: bold;
+  }
+  
+  /* Style for client detail value */
+  div > div {
+    margin-bottom: 10px;
+  }
