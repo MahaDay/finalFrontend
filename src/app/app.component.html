@@ -25,6 +25,10 @@
       <li class="nav-item">
         <a class="nav-link"  *ngIf="isLoggedIn" routerLink="Dashboard">{{'Dashboard'| translate}} </a>
       </li>
+
+      <li class="nav-item">
+        <a class="nav-link" *ngIf="isLoggedIn" routerLink="Review">Review </a>
+      </li>
       
       
       <li class="nav-item" *ngIf="showAdminBoard">
@@ -33,9 +37,7 @@
       <li class="nav-item" *ngIf="showModeratorBoard">
         <a href="/mod" class="nav-link" routerLink="mod">Moderator Board</a>
       </li>
-      <li class="nav-item">
-        <a href="/user" class="nav-link" *ngIf="isLoggedIn" routerLink="user">{{ 'User' | translate }}</a>
-      </li>
+      
     </ul>
 
     <ul class="navbar-nav ml-auto" *ngIf="!isLoggedIn">

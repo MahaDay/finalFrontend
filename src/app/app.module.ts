@@ -35,6 +35,7 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ErrorsComponent } from './errors/errors.component';
 import { AuthGuardService } from './_services/auth-guard.service';
+import { ReviewComponentComponent } from './Review/review-component/review-component.component';
 
 
 
@@ -70,7 +71,8 @@ export function createTranslateLoader(http: HttpClient) {
     DetailsProduitComponent,
     DetailsTransactionComponent,
     DashboardComponent,
-    ErrorsComponent
+    ErrorsComponent,
+    ReviewComponentComponent
 
     
   

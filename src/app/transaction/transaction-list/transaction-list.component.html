@@ -47,6 +47,8 @@
             <th> {{ 'Payment method' | translate }}</th>
             <th> {{ 'Amount' | translate }} </th>
             <th> {{ 'Transaction status' | translate }} </th>
+            <th> {{ 'Date ajout' | translate }} </th>
+
         </tr>
     </thead>
     <tbody>
@@ -57,6 +59,7 @@
             <td> {{ transaction.methodePaiement}} </td>
             <td> {{ transaction.montant}} </td>
             <td> {{ transaction.statutTransaction }} </td>
+            <td> {{ transaction.date_ajout}} </td>
             <td class="exclude-from-pdf">
                 <button (click)="updateTransaction(transaction.id_Transaction)"class= "btn btn-success">{{ 'Update' | translate }}</button>
                 <button (click)="detailsTransaction(transaction.id_Transaction)"class = "btn btn-primary" style="margin-left: 10px">{{ 'View' | translate }}</button>

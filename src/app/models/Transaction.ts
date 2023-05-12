@@ -9,4 +9,5 @@ export class Transaction {
     statutTransaction: any ;
     montant: any ;
     methodePaiement: any ;
+    date_ajout:any;
   }

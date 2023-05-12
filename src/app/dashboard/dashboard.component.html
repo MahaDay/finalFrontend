@@ -1,41 +1,46 @@
 
-  <html>
-        <head>
-            <title>Dashboard Example</title>
-            
-        </head>
-        <body>
-            
-            <h1>Dashboard Details</h1>
-
-            <canvas id="myChart"></canvas>
-            <br> 
-            
-
-            <div class="container">
-                <div class="card">
-                    <h2>Client</h2>
-                    <p>Nombre des clients:{{nbClient}}</p>
-                    <p>{{date}}</p>
-                </div>
+<html>
+    <head>
+        <title>Dashboard Example</title>
         
-                <div class="card">
-                    <h2>Product</h2>
-                    <p>Nombre des produits:{{nbProduit}}</p>
-                    
-                </div>
-                
-                <div class="card">
-                    <h2>Transaction</h2>
-                    <p>Nombre des transaction:{{nbTransaction}}</p>
-                    <p>Montant total :{{total}}</p>
-                    <p>Nombre des transactions ajoutées le dernier jour:{{totalD}}</p>
-			        <p>Nombre des transactions ajoutées le dernier mois:{{totalM}}</p>
-			        <p>Nombre des transactions ajoutées la derniére année:{{totalY}}</p>
-                </div>
+    </head>
+    <body>
         
+        <h1>{{'Dashboard Details'| translate}}</h1>
+
+        <canvas id="myChart"></canvas>
+        <br> 
+        <div class="d-flex justify-content-between">
+            <!-- <button class="btn btn-danger" (click)="getLastDay()">Get last Day</button> -->
+            <button (click)="getLastMonth()" class="btn btn-warning">Get last Month</button>
+            <button (click)="getLastYear()" class="btn btn-primary">Get last Year</button>
+        </div>
+      
+        <br>
+        <div class="container">
+            <div class="card">
+                <h2>Client</h2>
+                <p>Nombre des clients:{{nbClient}}</p>
+                <p>{{date}}</p>
             </div>
-           
+    
+            <div class="card">
+                <h2>Product</h2>
+                <p>Nombre des produits:{{nbProduit}}</p>
+                
+            </div>
+            
+            <div class="card">
+                <h2>Transaction</h2>
+                <p>Nombre des transaction:{{nbTransaction}}</p>
+                <p>Montant total :{{total}}</p>
+                <p>Nombre des transactions ajoutées le dernier jour:{{totalD}}</p>
+                <p>Nombre des transactions ajoutées le dernier mois:{{totalM}}</p>
+                <p>Nombre des transactions ajoutées la derniére année:{{totalY}}</p>
+            </div>
+    
+        </div>
+       
 
-        </body>
-        </html>
+    </body>
+    </html>

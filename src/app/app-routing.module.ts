@@ -27,6 +27,7 @@ import { DetailsTransactionComponent } from './transaction/details-transaction/d
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ErrorsComponent } from './errors/errors.component';
 import { AuthGuardService } from './_services/auth-guard.service';
+import { ReviewComponentComponent } from './Review/review-component/review-component.component';
 
 
 
@@ -59,9 +60,9 @@ const routes: Routes = [
   { path: 'detailsProduit/:id', component: DetailsProduitComponent },
   { path: 'detailsTransaction/:id', component: DetailsTransactionComponent },
   { path : 'Dashboard', component: DashboardComponent},
+  { path : 'Review', component: ReviewComponentComponent },
   { path : '**', component: ErrorsComponent  },
-  
-  
+ 
   { path: '', redirectTo: 'home', pathMatch: 'full' }
   
 ];
