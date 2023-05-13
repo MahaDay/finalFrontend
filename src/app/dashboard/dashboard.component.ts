@@ -22,6 +22,7 @@ export class DashboardComponent {
   chart: Chart | null = null;
   ctx:any;
   chart1:any=null;
+  
 
   
   constructor(private dashboardService: DashboardService){

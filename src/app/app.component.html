@@ -1,4 +1,4 @@
-<html>
+<!-- <html>
   <body>
     
 <div id="app" [dir]="getDirection()">
@@ -82,4 +82,125 @@
 </div>
 
 </body>
+</html> -->
+<html>
+  <body>
+    <div class="container">
+      <div class="navigation">
+        <ul> 
+          <li>
+            <a href="#">
+              <img class="logo"  src="../../assets/image/frslogo.png" alt="FRS Logo"/>
+              <!-- <span class="title">FRS</span> -->
+              
+            </a>
+          </li>
+          
+          <li>
+            <a href="#">
+              <span class="icon"><i class="fas fa-home"  style="color: rgb(138, 135, 135);"></i></span>
+              <span class="title">Home</span>
+              
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="icon"><i class="fas fa-chart-bar" style="color: rgb(138, 135, 135);"></i></span>
+              <span class="title">Dashboard</span>
+              
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="icon"><i class="fas fa-download"style="color: rgb(138, 135, 135);"></i></span>
+              <span class="title">Download</span>
+              
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <span class="icon"><i class="fas fa-users"  style="color: rgb(138, 135, 135);"></i></span>
+              <span class="title">Client List</span>
+              
+            </a>
+          </li>
+          <li>
+            <a href="#" >
+              <span class="icon"><i class="fas fa-laptop-code" style="color: rgb(138, 135, 135);"></i></span>
+              <span class="title">Product List</span>
+              
+            </a>
+          </li>
+          <li>
+            <a href="#" >
+              <span class="icon"><i class="fas fa-exchange-alt" style="color: rgb(138, 135, 135);"></i></span>
+              <span class="title">Transaction List</span>
+              
+            </a>
+          </li>
+         
+          <li>
+            <a href="#" >
+              <span class="icon"><i class="fas fa-sign-out-alt"  style="color: rgb(138, 135, 135);"></i></span>
+              <span class="title">Log Out</span>
+              
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" >
+              <span class="icon"><i class="fas fa-sign-in-alt" style="color: rgb(138, 135, 135);"></i></span>
+              <span class="title">Log in </span>
+              
+            </a>
+          </li>
+         
+        </ul>
+      </div>
+      <div class="main">
+        <div class="topbar">
+          <div class="toggle">
+            <i class="fas fa-bars" style="color: rgb(138, 135, 135);"></i>
+          </div>
+          <div class="search">
+            <label>
+              <input type="text"placeholder="Search here">
+              <i class="fas fa-search"></i>
+            </label>
+          </div>
+          <div class="user">
+            <i class="fas fa-user"></i>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    <script>
+      let toggle = document.querySelector('.toggle');
+      let navigation = document.querySelector('.navigation');
+      let main = document.querySelector('.main');
+
+      toggle.onclick = function(){
+        navigation.classList.toggle('active')
+
+      }
+
+
+
+        
+
+
+
+      let list = document.querySelectorAll('.navigation li');
+      function activeLink(){
+        list.forEach((item)=>
+        item.classList.remove('hovered'));
+        this.classList.add('hovered');
+      }
+      list.forEach((item)=>
+      item.addEventListener('mouseover',activeLink));
+    </script>
+    
+  </body>
+ 
 </html>
