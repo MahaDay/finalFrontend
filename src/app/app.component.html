@@ -150,7 +150,7 @@
           <li class="nav-item">
             <a href="#" >
               <span class="icon"><i class="fas fa-sign-in-alt" style="color: rgb(138, 135, 135);"></i></span>
-              <span class="title">Log in </span>
+              <span class="title">Sign up </span>
               
             </a>
           </li>
@@ -172,8 +172,39 @@
             <i class="fas fa-user"></i>
           </div>
         </div>
+
+        <div class="cardBox">
+          <div class="card">
+            <div  style="display: flex; align-items: center;">
+              <div class="numbers">2</div>
+              <div class="iconBx">
+              <i class="fas fa-users" style="font-size: 24px;color: grey  ;margin-left: 100px; margin-top: -20px;"></i>
+            </div>
+            </div>
+            <div class="cardName" >Nombre Client</div>
+          </div>
+          <div class="card">
+            <div style="display: flex; align-items: center;">
+              <div class="numbers">5</div>
+              <i class="fas fa-eye" style="font-size: 24px;  margin-left: 100px; margin-top: -20px;"></i>
+
+            </div>
+            <div class="cardName">Nombre Produit</div>
+
+          </div>
+          <div class="card">
+            <div style="display: flex; align-items: center;">
+              <div class="numbers">98125</div>
+              <i class="fas fa-money-bill-wave"  style="font-size: 24px;  margin-left: 100px; margin-top: -20px;"></i>
+
+            </div>
+            <div class="cardName">Montant Transaction</div>
+
+           
+          </div>
+        </div>
+
       </div>
-      
     </div>
     <script>
       let toggle = document.querySelector('.toggle');
@@ -181,14 +212,11 @@
       let main = document.querySelector('.main');
 
       toggle.onclick = function(){
-        navigation.classList.toggle('active')
+        navigation.classList.toggle('active');
+        main.classList.toggle('active');
+
 
       }
-
-
-
-        
-
 
 
       let list = document.querySelectorAll('.navigation li');
