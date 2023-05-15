@@ -153,7 +153,7 @@ export class DashboardComponent {
 
       updateChart(object_data:object={}){
         this.chart1.destroy()
-          this.chart1 = new Chart(this.ctx, { type: 'bar',
+          this.chart1 = new Chart(this.ctx, { type: 'line',
           data: {
             labels: Object.keys(object_data),
             datasets: [{

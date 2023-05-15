@@ -83,9 +83,11 @@
 
 </body>
 </html> -->
+
 <html>
   <body>
-    <div class="container">
+    <div id="app" [dir]="getDirection()">
+    
       <div class="navigation">
         <ul> 
           <li>
@@ -97,128 +99,56 @@
           </li>
           
           <li>
-            <a href="#">
-              <span class="icon"><i class="fas fa-home"  style="color: rgb(138, 135, 135);"></i></span>
-              <span class="title">Home</span>
+            <a  routerLink="home">
+              <span class="icon"><i class="fas fa-home"  style="color: rgb(138, 135, 135);font-size: 20px;" ></i></span>
+              <span class="title">{{ 'Home' | translate }}</span>
               
             </a>
           </li>
           <li>
-            <a href="#">
-              <span class="icon"><i class="fas fa-chart-bar" style="color: rgb(138, 135, 135);"></i></span>
-              <span class="title">Dashboard</span>
-              
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <span class="icon"><i class="fas fa-download"style="color: rgb(138, 135, 135);"></i></span>
-              <span class="title">Download</span>
-              
-            </a>
-          </li>
-
-          <li>
-            <a href="#">
-              <span class="icon"><i class="fas fa-users"  style="color: rgb(138, 135, 135);"></i></span>
-              <span class="title">Client List</span>
-              
-            </a>
-          </li>
-          <li>
-            <a href="#" >
-              <span class="icon"><i class="fas fa-laptop-code" style="color: rgb(138, 135, 135);"></i></span>
-              <span class="title">Product List</span>
-              
-            </a>
-          </li>
-          <li>
-            <a href="#" >
-              <span class="icon"><i class="fas fa-exchange-alt" style="color: rgb(138, 135, 135);"></i></span>
-              <span class="title">Transaction List</span>
+            <a href="/Dashboard"  routerLink="Dashboard">
+              <span class="icon"><i class="fas fa-chart-bar" style="color: rgb(138, 135, 135);font-size: 20px;"></i></span>
+              <span class="title">{{'Dashboard'| translate}}</span>
               
             </a>
           </li>
          
+
           <li>
-            <a href="#" >
-              <span class="icon"><i class="fas fa-sign-out-alt"  style="color: rgb(138, 135, 135);"></i></span>
-              <span class="title">Log Out</span>
+            <a href="/listClient" routerLink="listClient">
+              <span class="icon"><i class="fas fa-users"  style="color: rgb(138, 135, 135);font-size: 20px;"></i></span>
+              <span class="title">{{ 'Client list' | translate }}</span>
               
             </a>
           </li>
+          <li>
+            <a href="/listProduit" routerLink="listProduit">
+              <span class="icon"><i class="fas fa-laptop-code" style="color: rgb(138, 135, 135);font-size: 20px;"></i></span>
+              <span class="title">{{ 'Product list' | translate }}</span>
+              
+            </a>
+          </li>
+          <li>
+            <a href="/listTransaction" routerLink="listTransaction">
+              <span class="icon"><i class="fas fa-exchange-alt" style="color: rgb(138, 135, 135);font-size: 20px;"></i></span>
+              <span class="title">{{ 'Transaction list' | translate }}</span>
+              
+            </a>
+          </li>
+         
           <li class="nav-item">
-            <a href="#" >
-              <span class="icon"><i class="fas fa-sign-in-alt" style="color: rgb(138, 135, 135);"></i></span>
-              <span class="title">Sign up </span>
+            <a  routerLink="logout">
+              <span class="icon"><i class="fas fa-sign-out-alt" style="color: rgb(138, 135, 135);font-size: 20px;"></i></span>
+              <span class="title">{{ 'LogOut' | translate }}</span>
               
             </a>
           </li>
+         
          
         </ul>
       </div>
-      <div class="main">
-        <div class="topbar">
-          <div class="toggle">
-            <i class="fas fa-bars" style="color: rgb(138, 135, 135);"></i>
-          </div>
-          <div class="search">
-            <label>
-              <input type="text"placeholder="Search here">
-              <i class="fas fa-search"></i>
-            </label>
-          </div>
-          <div class="user">
-            <i class="fas fa-user"></i>
-          </div>
-        </div>
 
-        <div class="cardBox">
-          <div class="card">
-            <div  style="display: flex; align-items: center;">
-              <div class="numbers">2</div>
-              <div class="iconBx">
-              <i class="fas fa-users" style="font-size: 24px;color: grey  ;margin-left: 100px; margin-top: -20px;"></i>
-            </div>
-            </div>
-            <div class="cardName" >Nombre Client</div>
-          </div>
-          <div class="card">
-            <div style="display: flex; align-items: center;">
-              <div class="numbers">5</div>
-              <i class="fas fa-eye" style="font-size: 24px;  margin-left: 100px; margin-top: -20px;"></i>
-
-            </div>
-            <div class="cardName">Nombre Produit</div>
-
-          </div>
-          <div class="card">
-            <div style="display: flex; align-items: center;">
-              <div class="numbers">98125</div>
-              <i class="fas fa-money-bill-wave"  style="font-size: 24px;  margin-left: 100px; margin-top: -20px;"></i>
-
-            </div>
-            <div class="cardName">Montant Transaction</div>
-
-           
-          </div>
-        </div>
-
-      </div>
-    </div>
-    <script>
-      let toggle = document.querySelector('.toggle');
-      let navigation = document.querySelector('.navigation');
-      let main = document.querySelector('.main');
-
-      toggle.onclick = function(){
-        navigation.classList.toggle('active');
-        main.classList.toggle('active');
-
-
-      }
-
-
+      <script>
       let list = document.querySelectorAll('.navigation li');
       function activeLink(){
         list.forEach((item)=>
@@ -227,8 +157,12 @@
       }
       list.forEach((item)=>
       item.addEventListener('mouseover',activeLink));
-    </script>
-    
+     </script>
+     
+     <div class="container">
+      <router-outlet></router-outlet>
+     </div>
+    </div>
   </body>
  
 </html>

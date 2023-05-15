@@ -1,66 +1,74 @@
 /* Définir un style pour le corps de la page */
-body {
+.cotainer {
     background-color: #f2f2f2;
     font-family: Arial, sans-serif;
   }
-  
-  /* Définir un style pour le titre de la page */
-  h1 {
-    text-align: center;
-    color: #333333;
-  }
-  
-  /* Définir un style pour la carte */
-  /* .card {
-    background-color: #ffffff;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    padding: 20px;
-    margin: 20px;
-    text-align: center;
-  } */
-  .cardBox {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: 30%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    gap: 80px;
-    width: 100%;
-    cursor: pointer;
+ 
+ .cardBox{
+  position: relative;
+  width: 100%;
+  padding: 30px;
+  display: grid;
+  grid-template-columns: repeat(4,4fr);
+  grid-gap: 30px;
+  left: 10%;
 
-}
-.card {
-background: var(--white);
-padding: 20px;
-border-radius: 10px;
-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-display: flex;
-justify-content: space-between;
-align-items: center;
-width: 250px;
-height: 120px;
-}
+ } 
+ .cardBox .card{
+  position: relative;
+  background: var(--white);
+  padding: 20px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0 7px 25px rgba(0, 0, 0, 0.01);
+  top: 15%;
+  cursor: pointer;
 
-.card .numbers {
-position: relative;
+ }
+.cardBox .card .numbers {
+  position: relative;
 font-size: 2.5em;
-font-weight: 600;
+font-weight: 500;
 color:var(--blue);
+
 }
-  /* Définir un style pour le conteneur */
-  .container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+.card .cardName{
+  color:var(--grey);
+  font-size: 1.1em;
   }
-  
-  /* Définir un style pour le graphique */
-  #myChart {
-    width: 50%;
-    height: auto;
-    margin: 20px auto;
-  }
-  
-  
+  .cardBox .card:hover{
+    background: var(--blue);
+    }
+  .cardBox .card:hover .numbers,
+  .card:hover .cardName,
+  .card:hover .iconBx i {
+    color: var(--white);
+    }
+    /* #myChart {
+      width: 50%;
+      height: auto;
+      margin: 20px auto;
+      
+    } */
+
+
+    .Chart{
+      position: relative;
+      width: 70%;
+      padding: 20px;
+      display: grid;
+      grid-template-columns: 1fr ;
+      grid-gap: 30px;
+      min-height: 100px;
+      left:25%
+    }
+    
+    .Chart #myChart{
+      position: relative;
+      background: #fffefe;
+      padding: 20px;
+      width: 100%;
+      box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08) ;
+      border-radius: 20px;
+    }

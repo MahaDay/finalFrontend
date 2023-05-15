@@ -53,4 +53,8 @@ export class DashboardService {
     return this.http.get<any>(`http://localhost:8080/transaction/lastyear`);
 
   }
+  getTransactionLastFive(){
+    return this.http.get<any>(`http://localhost:8080/transaction/lastFive`);
+
+  }
 }

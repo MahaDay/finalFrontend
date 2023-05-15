@@ -5,67 +5,60 @@
         
     </head>
     <body>
-        
-        <h1>{{'Dashboard Details'| translate}}</h1>
+     
+        <div class="cardBox">
+          <div class="card">
+            <div  style="display: flex; align-items: center;">
+              <div class="numbers">{{nbClient}}</div>
+              <div class="cardName" >Nombre Client</div>
+              <div class="iconBx">
+              <i class="fas fa-users" style="font-size: 24px;margin-left: 100px; margin-top: -20px;"></i>
+              </div>
+            </div>
+            </div>
+          <div class="card">
+            <div style="display: flex; align-items: center;">
+              <div class="numbers">{{nbProduit}}</div>
+              <div class="cardName">Nombre Produit</div>
+              <div class="iconBx">
+              <i class="fas fa-laptop-code" style="font-size: 24px;  margin-left: 100px; margin-top: -20px;"></i>
+              </div>
+            </div>
 
+          </div>
+          <div class="card">
+            <div style="display: flex; align-items: center;">
+              <div class="numbers">{{nbTransaction}}</div>
+              <div class="cardName">Nombre Transaction</div>
+              <div class="iconBx">
+              <i class="fas fa-exchange-alt" style="font-size: 24px; margin-left: 60px;margin-top: -20px;"></i>
+              </div>
+            </div>
+
+          </div>
+          <div class="card">
+            <div style="display: flex; align-items: center;">
+              <div class="numbers">{{total}}</div>
+              <div class="cardName" >Montant Transaction</div>
+              <div class="iconBx">
+              <i class="fa-solid fa-dollar-sign"  style="font-size: 26px;margin-top: -20px; "></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="Chart">
         <canvas id="myChart"></canvas>
+        
         <br> 
         <div class="d-flex justify-content-between">
             <!-- <button class="btn btn-danger" (click)="getLastDay()">Get last Day</button> -->
             <button (click)="getLastMonth()" class="btn btn-warning">Get last Month</button>
             <button (click)="getLastYear()" class="btn btn-primary">Get last Year</button>
         </div>
+      </div>
       
         <br>
-        <div class="container">
-            <div class="card">
-                <h2>Client</h2>
-                <p>Nombre des clients:{{nbClient}}</p>
-                <p>{{date}}</p>
-            </div>
-    
-            <div class="card">
-                <h2>Product</h2>
-                <p>Nombre des produits:{{nbProduit}}</p>
-                
-            </div>
-            
-            <div class="card">
-                <h2>Transaction</h2>
-                <p>Nombre des transaction:{{nbTransaction}}</p>
-                <p>Montant total :{{total}}</p>
-            </div>
-    
-        </div>
-        <div class="cardBox">
-            <div class="card">
-              <div  style="display: flex; align-items: center;">
-                <div class="numbers">{{nbClient}}</div>
-                <i class="fas fa-users" style="font-size: 24px;  margin-left: 100px; margin-top: -20px;"></i>
-  
-              </div>
-              <div class="cardName" >Nombre Client</div>
-            </div>
-            <div class="card">
-              <div style="display: flex; align-items: center;">
-                <div class="numbers">{{nbProduit}}</div>
-                <i class="fas fa-eye" style="font-size: 24px;  margin-left: 100px; margin-top: -20px;"></i>
-  
-              </div>
-              <div class="cardName">Nombre Produit</div>
-  
-            </div>
-            <div class="card">
-              <div style="display: flex; align-items: center;">
-                <div class="numbers">{{total}}</div>
-                <i class="fas fa-money-bill-wave"  style="font-size: 24px;  margin-left: 100px; margin-top: -20px;"></i>
-  
-              </div>
-              <div class="cardName">Montant Transaction</div>
-  
-             
-            </div>
-          </div>
+       
        
 
     </body>
