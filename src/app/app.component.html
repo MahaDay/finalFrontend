@@ -91,7 +91,7 @@
       <div class="navigation">
         <ul> 
           <li>
-            <a href="#">
+            <a >
               <img class="logo"  src="../../assets/image/frslogo.png" alt="FRS Logo"/>
               <!-- <span class="title">FRS</span> -->
               
@@ -99,14 +99,14 @@
           </li>
           
           <li>
-            <a  routerLink="home">
+            <a *ngIf="isLoggedIn" routerLink="home">
               <span class="icon"><i class="fas fa-home"  style="color: rgb(138, 135, 135);font-size: 20px;" ></i></span>
               <span class="title">{{ 'Home' | translate }}</span>
               
             </a>
           </li>
           <li>
-            <a href="/Dashboard"  routerLink="Dashboard">
+            <a  *ngIf="isLoggedIn" routerLink="Dashboard">
               <span class="icon"><i class="fas fa-chart-bar" style="color: rgb(138, 135, 135);font-size: 20px;"></i></span>
               <span class="title">{{'Dashboard'| translate}}</span>
               
@@ -115,21 +115,21 @@
          
 
           <li>
-            <a href="/listClient" routerLink="listClient">
+            <a *ngIf="isLoggedIn" routerLink="listClient">
               <span class="icon"><i class="fas fa-users"  style="color: rgb(138, 135, 135);font-size: 20px;"></i></span>
               <span class="title">{{ 'Client list' | translate }}</span>
               
             </a>
           </li>
           <li>
-            <a href="/listProduit" routerLink="listProduit">
+            <a *ngIf="isLoggedIn" routerLink="listProduit">
               <span class="icon"><i class="fas fa-laptop-code" style="color: rgb(138, 135, 135);font-size: 20px;"></i></span>
               <span class="title">{{ 'Product list' | translate }}</span>
               
             </a>
           </li>
           <li>
-            <a href="/listTransaction" routerLink="listTransaction">
+            <a *ngIf="isLoggedIn" routerLink="listTransaction">
               <span class="icon"><i class="fas fa-exchange-alt" style="color: rgb(138, 135, 135);font-size: 20px;"></i></span>
               <span class="title">{{ 'Transaction list' | translate }}</span>
               
@@ -137,12 +137,28 @@
           </li>
          
           <li class="nav-item">
-            <a  routerLink="logout">
+            <a *ngIf="isLoggedIn" routerLink="logout">
               <span class="icon"><i class="fas fa-sign-out-alt" style="color: rgb(138, 135, 135);font-size: 20px;"></i></span>
-              <span class="title">{{ 'LogOut' | translate }}</span>
+              <span class="title">{{ 'Log Out' | translate }}</span>
               
             </a>
           </li>
+          
+            <li>
+              <a *ngIf="!isLoggedIn" routerLink="login">
+                <span class="icon"><i class="fa-solid fa-right-to-bracket" style="color: rgb(138, 135, 135);font-size: 20px;"></i></span>
+                <span class="title">{{ 'Log In' | translate }}</span>
+                
+              </a>
+            </li>
+            <li>
+              <a *ngIf="!isLoggedIn" routerLink="register">
+                <span class="icon"><i class="fa-solid fa-user-plus" style="color: rgb(138, 135, 135);font-size: 20px;"></i></span>
+                <span class="title">{{ 'Sign Up' | translate }}</span>
+                
+              </a>
+            </li>
+          
          
          
         </ul>

@@ -61,7 +61,8 @@ color:var(--blue);
       grid-template-columns: 1fr ;
       grid-gap: 30px;
       min-height: 100px;
-      left:25%
+      left:25%;
+      cursor: pointer;
     }
     
     .Chart #myChart{
