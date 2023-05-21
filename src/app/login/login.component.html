@@ -3,19 +3,92 @@
 </head>
 
 <div class="container">
-  <!-- <div class="image_fond">
-    <img  src="https://cdn-icons-png.flaticon.com/512/1179/1179406.png?w=740&t=st=1683126088~exp=1683126688~hmac=8b2ca277d0a4f5f51a5346a2f2b553f1086c5bdafe3b32e263630f6a2ddb91cf" alt="error">
-  </div> -->
-
-<div class="all-card">
-<h3 class="h3"> {{'Welcome to FRS'| translate}}</h3>
-<h1 class="h1"  > {{'Login for making the right decision'| translate}}</h1>
-
-
-<div class="col-md-12">
+  <span class="icon-close"><i class="fa-solid fa-xmark"></i></span>
   
-  <!-- <div class="card card-container"> -->
-    <img id="profile-img" src="https://cdn-icons-png.flaticon.com/512/1179/1179406.png?w=740&t=st=1683126088~exp=1683126688~hmac=8b2ca277d0a4f5f51a5346a2f2b553f1086c5bdafe3b32e263630f6a2ddb91cf"  class="profile-img-card" />
+ 
+    <form
+      *ngIf="!isLoggedIn"
+      name="form"
+      (ngSubmit)="f.form.valid && onSubmit()"
+      #f="ngForm"
+      novalidate
+    >
+   
+      <div class="form-group">
+        <h2>Login</h2>
+        <div class="input-box">
+            <span class="icon"></span>
+            <span class="icon"><i class="fas fa-user" ></i></span>
+            
+          
+          <input
+            type="text"
+            class="form-control"
+            name="username"
+            [(ngModel)]="form.username"
+            required
+            #username="ngModel"
+            [ngClass]="{ 'is-invalid': f.submitted && username.errors }"
+          />
+          <span class="title">{{ 'User Name' | translate }}</span>
+          <div *ngIf="username.errors && f.submitted" class="invalid-feedback">
+            {{'Username is required!'| translate}}
+          </div>
+        </div>
+      </div>
+ 
+        
+        <div class="input-box">
+          <span class="icon"></span>
+          <span class="icon"><i class="fa-sharp fa-solid fa-lock"></i></span>
+        
+          <input  type="password" class="form-control" name="password" [(ngModel)]="form.password" required minlength="6" #password="ngModel" [ngClass]="{ 'is-invalid': f.submitted && password.errors }" />
+          <span class="title">{{ 'Password' | translate }}</span>
+        
+        <div *ngIf="password.errors && f.submitted" class="invalid-feedback">
+          <div *ngIf="password.errors['required']">{{'Password is required'| translate}}</div>
+          <div *ngIf="password.errors['minlength']">
+            {{'Password must be at least 6 characters'| translate}}
+            </div>
+          </div>
+        </div>
+        <div class="remembre-forgot">
+          <label><input type="checkbox">Remember me </label>
+          <a href="#"> Forgot Password? </a>
+        </div>
+    
+      <div class="form-group">
+        <button class="btn">
+          {{ 'Login' | translate }}
+        </button>
+      </div>
+      <div class="login-register">
+        <p>Don't have an account ? <a href="/register" class="register-link">Go To Register </a></p>
+      </div>
+      <div class="form-group">
+        <div *ngIf="f.submitted && isLoginFailed" class="alert alert-danger" role="alert">
+          {{'Login failed:'| translate}} {{ errorMessage }}
+        </div>
+      </div>
+    </form>
+
+    <div class="alert alert-success" *ngIf="isLoggedIn">
+      {{'Logged in as'| translate}} {{ roles }}.
+    </div>
+  
+</div>
+
+
+
+
+
+<!-- <head>
+  <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+</head>
+
+<div class="container">
+
+  <span class="icon-close"><i class="fa-solid fa-xmark"></i></span>
 
    
     <form
@@ -27,39 +100,32 @@
     >
     <br>
       <div class="form-group">
-        <label class="label" for="username">{{ 'Username' | translate }}</label>
-        <div class="input-group">
-          <div class="input-group-prepend">
-            <span class="input-group-text">
-              <i class="fa fa-user"></i>
-            </span>
-          </div>
-          <input
-            type="text"
-            class="form-control"
-            name="username"
-            [(ngModel)]="form.username"
-            required
-            #username="ngModel"
-            [ngClass]="{ 'is-invalid': f.submitted && username.errors }"
-          />
-          <div *ngIf="username.errors && f.submitted" class="invalid-feedback">
-            {{'Username is required!'| translate}}
-          </div>
+        <h2>Login</h2>
+       <form action="#">
+        <div class="input-box">
+          <span class="icon"></span>
+          <span class="icon"><i class="fas fa-user" ></i></span>
+          <input 
+          type="text"
+          class="form-control"
+          name="username"
+          [(ngModel)]="form.username"
+          required
+          #username="ngModel"
+          [ngClass]="{ 'is-invalid': f.submitted && username.errors }"/>
+          <span class="title">{{ 'User Name' | translate }}</span>
         </div>
+        <div *ngIf="username.errors && f.submitted" class="invalid-feedback">
+          {{'Username is required!'| translate}}
+        </div>
+        
       </div>
-     <br> 
-      <div class="form-group">
-        <label class="label" for="password">{{ 'Password' | translate }}</label>
-        <div class="input-group">
-          <div class="input-group-prepend1">
-            <span class="input-group-text">
-              <i class="fas fa-lock"></i>
-            </span>
-          </div>
-          
+        <div class="input-box">
+          <span class="icon"></span>
+          <span class="icon"><i class="fa-sharp fa-solid fa-lock"></i></span>
           <input  type="password" class="form-control" name="password" [(ngModel)]="form.password" required minlength="6" #password="ngModel" [ngClass]="{ 'is-invalid': f.submitted && password.errors }" />
-        </div>
+          <span class="title">{{ 'Password' | translate }}</span>
+          
         <div *ngIf="password.errors && f.submitted" class="invalid-feedback">
           <div *ngIf="password.errors['required']">{{'Password is required'| translate}}</div>
           <div *ngIf="password.errors['minlength']">
@@ -67,25 +133,23 @@
             </div>
           </div>
         </div>
-      <br>
-      <div class="form-group">
-        <button class="btn btn-primary btn-block">
-          {{ 'Login' | translate }}
-        </button>
-        <p class="inline-block">Don't have an account?</p>
-        <a href="/register" class="inline-block">Go to register page</a>
-      </div>
-      <div class="form-group">
-        <div *ngIf="f.submitted && isLoginFailed" class="alert alert-danger" role="alert">
-          {{'Login failed:'| translate}} {{ errorMessage }}
+        
+        <div class="remembre-forgot">
+          <label><input type="checkbox">Remember me </label>
+          <a href="#"> Forgot Password? </a>
         </div>
-      </div>
+        <button type="submit" class="btn ">Login</button>
+        <div class="login-register">
+          <p>Don't have an account ? <a href="/register" class="register-link">Go To Register </a></p>
+        </div>
+       </form>
+       
+          
+        </div>
+      
+     <br> 
+     
     </form>
 
-    <div class="alert alert-success" >
-      {{'Logged in as'| translate}} {{ roles }}.
-    </div>
-  
-</div>
-</div>
-</div>
+ 
+</div> -->
