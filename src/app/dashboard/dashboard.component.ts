@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { TransactionService } from '../_services/transaction.service';
 import { DashboardService } from '../_services/dashboard.service';
 import Chart from 'chart.js/auto';
+import { Transaction } from 'ethers';
 
 
 
@@ -14,6 +15,7 @@ export class DashboardComponent {
   nbTransaction:any;
   nbProduit:any;
   nbClient:any;
+  listAjout:any;
   date:any;
   total:any;
   totalD:any;
@@ -37,6 +39,7 @@ export class DashboardComponent {
     this.getTransactionLastDay();
     this.getTransactionLastMonth();
     this.getTransactionLastYear();
+    this. getDateAjout();
     // this.getChart()
 
      const canvas = document.getElementById('myChart') as HTMLCanvasElement;
@@ -105,6 +108,16 @@ export class DashboardComponent {
       });
       
       }
+
+      getDateAjout(){
+        this.dashboardService.getDateAjout().subscribe((nombre: number)=>{
+          this.listAjout=nombre;
+          
+          
+        });
+        
+      }
+    
 
     getNbClient(){
 

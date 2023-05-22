@@ -56,13 +56,34 @@
             <button (click)="getLastYear()" class="btn btn-primary">Get last Year</button>
         </div>
       </div>
-      <div class="user">
-        <img src="../../assets/image/img maha.jpg" alt="Profile Image" class="profile-image"/>
-      </div>
-      
-      
-      
+     
         <br>
+        
+        <table class = "table table-striped">
+          <thead>
+              <tr>
+                  <th>Transaction Type</th>
+                  <th> Product</th>
+                  <th> Client </th>
+                  <th> Status </th>
+                 
+                  
+                  
+              </tr>
+          </thead>
+          <tbody>
+              <tr *ngFor = "let transaction of listAjout" >
+                  <td> {{ transaction.typeTransaction}} </td>
+                  <td> {{transaction.produit }} </td>
+                  <td> {{transaction.client}} </td>
+                  <td> {{ transaction.statutTransaction }} </td>
+                  
+                  
+                
+              </tr>
+          </tbody>
+      </table>
+
 
         <!-- <div class="card-body">
           <div class="table-responsive">

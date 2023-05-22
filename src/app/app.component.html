@@ -163,6 +163,27 @@
          
         </ul>
       </div>
+      <div class="button-container">
+      <div class="btn-group btn-group-sm py-5  " style="top: 100%; left:2% ;">
+        <button type="button" class="btn btn-sm btn-outline-secondary" (click)="changeLanguage('en-US')" >
+          <img src="https://cdn-icons-png.flaticon.com/512/197/197374.png" alt="Anglais" style="width: 24px; height: 24px;">
+          <br>
+          English
+        </button>
+      
+        <button type="button" class="btn btn-sm btn-outline-secondary" (click)="changeLanguage('fr-FR')">
+          <img src="https://cdn-icons-png.flaticon.com/512/323/323315.png" alt="Français" style="width: 24px; height: 24px;">
+        <br>
+          French
+        </button>
+      
+        <button type="button" class="btn btn-sm btn-outline-secondary" (click)="changeLanguage('ar-AR')" >
+          <img src="https://cdn-icons-png.flaticon.com/512/197/197624.png?w=740&t=st=1684751491~exp=1684752091~hmac=822dd9f9087ee576a54fbbfcad7b66cf0ba7cbe07c902ec6419809c75da5805e" alt="عربي" style="width: 24px; height: 24px;">
+        <br>
+          Arabic
+        </button>
+      </div>
+    </div>
 
       <script>
       let list = document.querySelectorAll('.navigation li');

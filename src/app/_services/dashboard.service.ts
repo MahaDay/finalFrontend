@@ -57,4 +57,8 @@ export class DashboardService {
     return this.http.get<any>(`http://localhost:8080/transaction/lastFive`);
 
   }
+  getDateAjout(){
+    return this.http.get<any>(`http://localhost:8080/transaction/date-ajout`);
+
+  }
 }
