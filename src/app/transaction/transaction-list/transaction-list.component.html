@@ -1,5 +1,5 @@
 <div [dir]="getDirection()">
-    
+    <div class="container">
 <h1 style="font-size: 200%; width: 150%; margin-top: 20px;"> {{ 'Transaction list' | translate }} </h1>
 <button (click)="navigateToCreateTransactionInterface()" type="button"  class="btn btn-primary btn-sm p-3 " data-bs-toggle="modal" data-bs-target="#kt_modal_add_user"style="float: right;">
     <!--begin::Svg Icon | path: icons/duotune/arrows/arr075.svg-->
@@ -62,17 +62,13 @@
             <td> {{ transaction.date_ajout}} </td>
             <td class="exclude-from-pdf">
                 <button (click)="updateTransaction(transaction.id_Transaction)"class= "btn btn-success">{{ 'Update' | translate }}</button>
-                <button (click)="detailsTransaction(transaction.id_Transaction)"class = "btn btn-primary" style="margin-left: 10px">{{ 'View' | translate }}</button>
-                <button  (click)="selectedTransactionId = transaction.id_Transaction; showDialog()" class = "btn btn-danger" style="margin-left: 10px">{{ 'Delete' | translate }}</button>
+                <button class="my-button"(click)="detailsTransaction(transaction.id_Transaction)"class = "btn btn-primary" style="margin-left: 10px">{{ 'View' | translate }}</button>
+                <button  class="my-button"(click)="selectedTransactionId = transaction.id_Transaction; showDialog()" class = "btn btn-danger" style="margin-left: 10px">{{ 'Delete' | translate }}</button>
             </td>
         </tr>
     </tbody>
 </table>
 </div>
-<br>
-
-
-
 <div *ngIf="isVisible" class="delete-modal">
     <div class="delete-modal-content">
       <h3>{{'Are you sure you want to delete this transaction ?'| translate}}</h3>
@@ -81,7 +77,8 @@
         <button class="my-button" (click)="hideDialog()"id="delete-no">{{'No'| translate}}</button>
       </div>
     </div>
-  </div>
+</div>
+</div>
 
   
 

@@ -111,7 +111,7 @@ export class DashboardComponent {
 
       getDateAjout(){
         this.dashboardService.getDateAjout().subscribe((nombre: number)=>{
-          this.listAjout=nombre;
+          console.log(this.listAjout=nombre);
           
           
         });

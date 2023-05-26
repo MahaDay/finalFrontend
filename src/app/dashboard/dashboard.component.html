@@ -55,37 +55,7 @@
             <button (click)="getLastMonth()" class="btn btn-warning">Get last Month</button>
             <button (click)="getLastYear()" class="btn btn-primary">Get last Year</button>
         </div>
-      </div>
-     
-        <br>
-        
-        <table class = "table table-striped">
-          <thead>
-              <tr>
-                  <th>Transaction Type</th>
-                  <th> Product</th>
-                  <th> Client </th>
-                  <th> Status </th>
-                 
-                  
-                  
-              </tr>
-          </thead>
-          <tbody>
-              <tr *ngFor = "let transaction of listAjout" >
-                  <td> {{ transaction.typeTransaction}} </td>
-                  <td> {{transaction.produit }} </td>
-                  <td> {{transaction.client}} </td>
-                  <td> {{ transaction.statutTransaction }} </td>
-                  
-                  
-                
-              </tr>
-          </tbody>
-      </table>
-
-
-        <!-- <div class="card-body">
+        <div class="card-body">
           <div class="table-responsive">
             <table class="table table-hover">
               <thead>
@@ -98,40 +68,53 @@
               </thead>
               <tbody>
                 <tr>
-                  <td>{{typeTransaction}}</td>
-                  <td>{{}}</td>
-                  <td>{{}}</td>
-                  <td><span class="badge bg-success">{{statutTransaction}}</span></td>
+                  <td>non_selectioner</td>
+                  <td>Software</td>
+                  <td>Yosri</td>
+                  <td><span class="badge bg-success">Paid</span></td>
                 </tr>
                 <tr>
-                  <td>{{typeTransaction}}</td>
-                  <td>{{}}</td>
-                  <td>{{}}</td>
-                  <td><span class="badge bg-warning text-dark">{{statutTransaction}}</span></td>
+                  <td>vente_integre</td>
+                  <td>Software</td>
+                  <td>Yosri</td>
+                  <td><span class="badge bg-warning text-dark">Pending</span></td>
                 </tr>
                 <tr>
-                  <td>{{typeTransaction}}</td>
-                  <td>{{}}</td>
-                  <td>{{}}</td>
-                  <td><span class="badge bg-danger">{{statutTransaction}}</span></td>
+                  <td>services</td>
+                  <td>Software</td>
+                  <td>Yosri</td>
+                  <td><span class="badge bg-danger">Refunded</span></td>
                 </tr>
                 <tr>
-                  <td>{{typeTransaction}}</td>
-                  <td>{{}}</td>
-                  <td>{{}}</td>
-                  <td><span class="badge bg-danger">{{statutTransaction}}</span></td>
+                  <td>services</td>
+                  <td>Software</td>
+                  <td>Yosri</td>
+                  <td><span class="badge bg-danger">Refunded</span></td>
                 </tr>
                 <tr>
-                  <td>{{typeTransaction}}</td>
-                  <td>{{}}</td>
-                  <td>{{}}</td>
-                  <td><span class="badge bg-danger">{{statutTransaction}}</span></td>
+                  <td>services</td>
+                  <td>Software</td>
+                  <td>Yosri</td>
+                  <td><span class="badge bg-danger">Refunded</span></td>
                 </tr>
               </tbody>
             </table>
           </div>
           
-        </div> -->
+        </div>
+      </div>
+     
+        <br>
+        
+        
+
+
+    
+   
+    
+
+
+      
        
        
 

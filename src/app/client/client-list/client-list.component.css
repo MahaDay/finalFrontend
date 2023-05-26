@@ -1,4 +1,10 @@
-/* .delete-modal {
+.container{
+  position: relative;
+  left: 10%;
+  top: -30%;
+}
+
+   .delete-modal {
     
     position: fixed;
     z-index: 1;
@@ -20,8 +26,8 @@
   }
   
   
-
-
+  
+  
   .my-button {
     background-color: #008CBA;
     border: none;
@@ -45,4 +51,3 @@
     background-color: #ccc;
     margin-left: 20px;
   }
-   */

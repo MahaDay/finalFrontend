@@ -88,6 +88,23 @@ color:var(--blue);
       
       
     }
+
+    
+  .card1{
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    top: 40%;
+    right: 50%;
+   gap: 50%;
+   cursor: pointer;
+  }
+  .card-header{
+    font-size: 2.2em;
+    font-weight: 600;
+
+   
+  }
     
     
     
